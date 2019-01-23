@@ -13,6 +13,8 @@ services:
       - db
     volumes:
       - ./config:/var/www/html/config
+    logging:
+      driver: journald
   web:
     image: nginx
     volumes:
